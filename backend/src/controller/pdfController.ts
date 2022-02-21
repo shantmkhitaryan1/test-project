@@ -28,6 +28,7 @@ export default class PdfController {
             };
 
             request(options, function (error, response) {
+                console.log(error);
                 if (error) throw new Error(error);
                 res.status(200).send(new Response(200, {data: response.body}, 'data successfully parsed'));
             });

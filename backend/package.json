@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "tsc && nodemon ./dist/index.js"
+    "prod": "env-cmd -f .env tsc && nodemon ./dist/index.js",
+    "dev": "env-cmd -f .env.dev tsc && nodemon ./dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^17.0.18",

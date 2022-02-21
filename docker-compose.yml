@@ -31,9 +31,10 @@ services:
     links:
       - "backend:be"
   tika:
-    build:
-      context: ./tika
-      dockerfile: ./Dockerfile
-    image: apache/tika
+    container_name: tika
+    image: logicalspark/docker-tikaserver
+    # build:
+    #   context: ./tika
+    #   dockerfile: ./Dockerfile
     ports:
       - "9998:9998"
