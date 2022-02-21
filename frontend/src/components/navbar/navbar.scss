@@ -1,0 +1,48 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 25px;
+    align-items: center;
+
+    .left-side,
+    .right-side {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        margin-left: 11px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 29px;
+        color: #1B3664;
+        max-width: 160px;
+    }
+
+    .avatar-container {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-info {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #666666;
+        margin-left: 14px;
+    }
+}

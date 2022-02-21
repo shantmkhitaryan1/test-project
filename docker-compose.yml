@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  backend:
+    env_file:
+        "./backend/.env"
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    image: "backend"
+    ports:
+      - "8000:8000"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - '27017:27017'
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    image: "frontend"
+    # command: chmod -R 755 /
+    ports:
+      - "3000:3000"
+    links:
+      - "backend:be"
+  tika:
+    build:
+      context: ./tika
+      dockerfile: ./Dockerfile
+    image: apache/tika
+    ports:
+      - "9998:9998"

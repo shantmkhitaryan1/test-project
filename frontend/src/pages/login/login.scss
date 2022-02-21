@@ -1,0 +1,97 @@
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    .left-block {
+        width: 70%;
+        height: 100%;
+    }
+
+    .right-block {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 54px 65px;
+            margin-left: -62%;
+            box-shadow: 0px 3px 5px #3b3b3b;
+
+            .form-title {
+                color: #264464;
+                font-family: inherit;
+                margin-bottom: 40px;
+                margin-top: 0;
+            }
+
+            .form-fields {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 450px;
+
+                .form-item {
+                    margin-bottom: 30px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    .show-hide {
+                        cursor: pointer;
+                        position: absolute;
+                        right: 19px;
+                    }
+                }
+
+                .checkbox-container {
+                    width: 100%;
+                    margin-left: -21px;
+                    font-size: 14px;
+                    color: #264464;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+
+                .save-button {
+                    width: 100%;
+                    background-color: #264464;
+                    border: none;
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 56px;
+                    cursor: pointer;
+                    font-family: inherit;
+                }
+
+                .link {
+                    cursor: pointer;
+                    color: #264464;
+                    font-size: 14px;
+                    margin-top: 15px;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+.MuiTextField-root {
+    width: 100%;
+}
+
+.MuiCheckbox-root.Mui-checked {
+    color: #264464 !important;
+}
